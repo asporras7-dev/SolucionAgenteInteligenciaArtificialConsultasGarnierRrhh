@@ -2,7 +2,7 @@
 
 Este repositorio contiene el código fuente (Frontend y Backend) de un prototipo de una plataforma inteligente diseñada específicamente para el departamento de Recursos Humanos de la empresa Garnier y Garnier. El sistema emplea un **Agente de Inteligencia Artificial** con tecnología RAG (Retrieval-Augmented Generation) y el protocolo MCP (Model Context Protocol) para resolver consultas de los empleados respecto a las políticas y reglas de la empresa, y a los derechos, beneficios y seguros con los que cuentan dichos emplados de forma automatizada, contextual y segura.
 
-## 🛠️ Stack Tecnológico
+## Stack Tecnológico
 
 El proyecto está construido bajo una arquitectura cliente-servidor (Full-Stack), integrando motores de Inteligencia Artificial y procesamiento de lenguaje natural de última generación.
 
