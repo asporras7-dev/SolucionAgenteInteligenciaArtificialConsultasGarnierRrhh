@@ -127,3 +127,27 @@ cd AgenteIaConsultasGarnierRrhh/SolucionAgenteInteligenciaArtificialConsultasGar
    ```
 
 El portal estará disponible en tu navegador en `http://localhost:5173` para interactuar con el Agente RRHH. ¡Listo para desarrollar!
+
+---
+
+## Estructura del Proyecto
+
+El proyecto mantiene una estricta separación entre el portal web y el servidor inteligente que orquesta la IA:
+
+```text
+GarnierRrhh/
+├── backend/                 # Servidor de IA y API (Node.js)
+│   ├── config/              # Configuraciones de BD
+│   ├── mcp/                 # Definición del Model Context Protocol (mcpServer.js)
+│   ├── migrations/          # Migraciones de base de datos
+│   ├── models/              # Modelos relacionales de Sequelize
+│   ├── scripts/             # Scripts de utilidad
+│   ├── services/            # Servicios complejos (RAG, embeddings, notificaciones)
+│   └── utils/               # Utilidades generales
+├── frontend/                # Interfaz de usuario (React / Vite)
+│   ├── public/              # Archivos públicos y assets (favicon, etc)
+│   ├── src/                 
+│   │   ├── assets/          # Recursos visuales compilables
+│   │   └── components/      # Componentes de UI (Chat, Panel Admin)
+```
+
