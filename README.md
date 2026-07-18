@@ -96,8 +96,8 @@ El proyecto aún no se encuentra desplegado en un servidor público, pero su arq
 
 ### 2. Clonar el Repositorio
 ```bash
-git clone https://github.com/asporras7-dev/SolucionAgenteInteligenciaArtificialConsultasGarnierRrhh.git
-cd SolucionAgenteInteligenciaArtificialConsultasGarnierRrhh
+git clone https://github.com/TuUsuario/AgenteIaConsultasGarnierRrhh.git
+cd AgenteIaConsultasGarnierRrhh/SolucionAgenteInteligenciaArtificialConsultasGarnierRrhh
 ```
 
 ### 3. Configuración de la Base de Datos (MySQL)
@@ -110,7 +110,18 @@ cd SolucionAgenteInteligenciaArtificialConsultasGarnierRrhh
    cd backend
    npm install
    ```
-2. Crea el archivo `.env` en `backend/` con los parámetros correspondientes (BD, puerto, claves secretas y API Keys de IA si aplican).
+2. Crea el archivo `.env` en la raíz de `backend/` con tus parámetros de conexión locales y de IA:
+   ```env
+   # Base de Datos
+   DB_HOST=localhost
+   DB_USER=root
+   DB_PASSWORD=
+   DB_NAME=garnier_rrhh
+   DB_DIALECT=mysql
+
+   # Servidor y API Keys
+   PORT=3000
+   ```
 3. Inicia el servidor de desarrollo:
    ```bash
    npm start
@@ -157,5 +168,9 @@ GarnierRrhh/
 │   ├── src/                 
 │   │   ├── assets/          # Recursos visuales compilables
 │   │   └── components/      # Componentes de UI (Chat, Panel Admin)
+├── package.json             # Scripts para ejecución concurrente
+├── package-lock.json        # Árbol de dependencias bloqueado
+└── .gitignore               # Archivos excluidos del repositorio
 ```
 </details>
+
