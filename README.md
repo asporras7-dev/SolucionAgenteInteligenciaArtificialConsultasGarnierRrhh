@@ -96,7 +96,7 @@ El proyecto aún no se encuentra desplegado en un servidor público, pero su arq
 
 ### 2. Clonar el Repositorio
 ```bash
-git clone https://github.com/TuUsuario/AgenteIaConsultasGarnierRrhh.git
+git clone https://github.com/asporras7-dev/SolucionAgenteInteligenciaArtificialConsultasGarnierRrhh.git
 cd AgenteIaConsultasGarnierRrhh/SolucionAgenteInteligenciaArtificialConsultasGarnierRrhh
 ```
 
