@@ -31,17 +31,6 @@ El proyecto está construido bajo una arquitectura cliente-servidor (Full-Stack)
 
 ---
 
-## Valor de Negocio y Logros Técnicos (Highlights para Reclutadores)
-
-Este proyecto fue concebido no solo como una solución de software, sino como un producto enfocado en resolver problemas reales en la gestión de capital humano (RRHH), demostrando capacidad para integrar arquitecturas complejas de Inteligencia Artificial de forma segura y ética:
-
-- **Arquitectura Basada en Contexto (Model Context Protocol - MCP)**: Implementación de un servidor MCP nativo que estandariza herramientas (`Tools`), recursos (`Resources`) y plantillas (`Prompts`). Esto permite que el LLM actúe como un agente activo (ej: abriendo tickets o iniciando flujos de Onboarding), en lugar de ser un simple generador de texto.
-- **RAG Local de Alta Precisión**: Se construyó un motor de Retrieval-Augmented Generation completo. Los PDFs de la empresa se procesan, fragmentan y vectorizan localmente calculando la similitud del coseno (Cosine Similarity). Esto garantiza privacidad corporativa y un estricto control sobre las "alucinaciones" del modelo.
-- **Inteligencia Emocional y Escalamiento Seguro**: Algoritmos de enrutamiento que detectan intenciones sensibles (ej. crisis emocionales, acoso laboral o urgencias). Si se detectan, el flujo de IA generativa se bloquea para dar paso a plantillas de alta empatía y escalar un ticket crítico (vía Email a RRHH) automáticamente.
-- **Data-Driven (Analíticas)**: Tracking de cada interacción en la plataforma, midiendo niveles de certeza (*confidence scores*), consultas no resueltas y vacíos de información. Esto entrega a la empresa *insights* directos sobre qué políticas deben actualizarse.
-
----
-
 ## Funcionalidades Principales
 
 El sistema moderniza la atención al empleado, combinando automatización con escalamiento inteligente:
@@ -73,11 +62,22 @@ El sistema moderniza la atención al empleado, combinando automatización con es
 
 ---
 
+## Valor de Negocio y Logros Técnicos (Highlights para Reclutadores)
+
+Este proyecto fue concebido no solo como una solución de software, sino como un producto enfocado en resolver problemas reales en la gestión de capital humano (RRHH), demostrando capacidad para integrar arquitecturas complejas de Inteligencia Artificial de forma segura y ética:
+
+- **Arquitectura Basada en Contexto (Model Context Protocol - MCP)**: Implementación de un servidor MCP nativo que estandariza herramientas (`Tools`), recursos (`Resources`) y plantillas (`Prompts`). Esto permite que el LLM actúe como un agente activo (ej: abriendo tickets o iniciando flujos de Onboarding), en lugar de ser un simple generador de texto.
+- **RAG Local de Alta Precisión**: Se construyó un motor de Retrieval-Augmented Generation completo. Los PDFs de la empresa se procesan, fragmentan y vectorizan localmente calculando la similitud del coseno (Cosine Similarity). Esto garantiza privacidad corporativa y un estricto control sobre las "alucinaciones" del modelo.
+- **Inteligencia Emocional y Escalamiento Seguro**: Algoritmos de enrutamiento que detectan intenciones sensibles (ej. crisis emocionales, acoso laboral o urgencias). Si se detectan, el flujo de IA generativa se bloquea para dar paso a plantillas de alta empatía y escalar un ticket crítico (vía Email a RRHH) automáticamente.
+- **Data-Driven (Analíticas)**: Tracking de cada interacción en la plataforma, midiendo niveles de certeza (*confidence scores*), consultas no resueltas y vacíos de información. Esto entrega a la empresa *insights* directos sobre qué políticas deben actualizarse.
+
+---
+
 ## Arquitectura Preparada para Producción (Production-Ready)
 
 El proyecto aún no se encuentra desplegado en un servidor público, pero su arquitectura ha sido construida bajo estrictos estándares corporativos para facilitar un paso a producción (Go-Live) seguro y escalable:
 
-- **Frontend (SPA)**: Listo para ser optimizado y transpilado a estáticos a través de Vite (npm run build). Los archivos resultantes están estructurados para un despliegue ágil en plataformas de *Edge Computing* y CDN globales (como **Vercel, Netlify o AWS S3 + CloudFront**), integrándose fácilmente en flujos de CI/CD para despliegues continuos.
+- **Frontend (SPA)**: Listo para ser optimizado y transpilado a estáticos a través de Vite (`npm run build`). Los archivos resultantes están estructurados para un despliegue ágil en plataformas de *Edge Computing* y CDN globales (como **Vercel, Netlify o AWS S3 + CloudFront**), integrándose fácilmente en flujos de CI/CD para despliegues continuos.
 - **Backend API & MCP**: El servidor de Node.js está diseñado bajo una arquitectura sin estado (*Stateless*), lo que permite que sea desplegado mediante múltiples opciones corporativas: gestores de procesos (**PM2**), orquestación de contenedores (**Docker / Kubernetes**), o plataformas PaaS (**AWS Elastic Beanstalk / Azure App Service**), garantizando escalabilidad horizontal y *Zero Downtime*.
 - **Base de Datos Relacional**: La capa de datos gestionada por Sequelize facilita futuras migraciones a entornos Cloud (ej. AWS RDS), manteniendo intacta la estructura e integridad de la información de los empleados.
 - **Enfoque en Seguridad**: Todo el flujo de datos ha sido diseñado anticipando el uso de proxies inversos y certificados SSL/TLS, lo que asegurará la confidencialidad absoluta de las consultas de Recursos Humanos una vez montado en un entorno real.
@@ -85,6 +85,9 @@ El proyecto aún no se encuentra desplegado en un servidor público, pero su arq
 ---
 
 ## Instalación y Ejecución Local (Guía Paso a Paso)
+
+<details>
+<summary><b>Haz clic aquí para ver la Guía de Instalación y Ejecución Local</b></summary>
 
 ### 1. Prerrequisitos
 - [Node.js](https://nodejs.org/) (Versión 18+).
@@ -101,7 +104,7 @@ cd AgenteIaConsultasGarnierRrhh/SolucionAgenteInteligenciaArtificialConsultasGar
 1. Crea una base de datos vacía llamada `garnier_rrhh` en tu gestor (ej. phpMyAdmin o MySQL Workbench).
 2. El ORM (Sequelize) se encargará de crear las tablas al iniciar si la sincronización está activa o mediante scripts de migración.
 
-### ⚙️ 4. Configuración del Backend
+### 4. Configuración del Backend
 1. Navega a la carpeta backend e instala dependencias:
    ```bash
    cd backend
@@ -128,9 +131,14 @@ cd AgenteIaConsultasGarnierRrhh/SolucionAgenteInteligenciaArtificialConsultasGar
 
 El portal estará disponible en tu navegador en `http://localhost:5173` para interactuar con el Agente RRHH. ¡Listo para desarrollar!
 
+</details>
+
 ---
 
 ## Estructura del Proyecto
+
+<details>
+<summary><b>Haz clic aquí para desplegar la Arquitectura de Carpetas</b></summary>
 
 El proyecto mantiene una estricta separación entre el portal web y el servidor inteligente que orquesta la IA:
 
@@ -150,4 +158,4 @@ GarnierRrhh/
 │   │   ├── assets/          # Recursos visuales compilables
 │   │   └── components/      # Componentes de UI (Chat, Panel Admin)
 ```
-
+</details>
