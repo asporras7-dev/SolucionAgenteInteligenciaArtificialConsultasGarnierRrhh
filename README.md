@@ -96,8 +96,8 @@ El proyecto aún no se encuentra desplegado en un servidor público, pero su arq
 
 ### 2. Clonar el Repositorio
 ```bash
-git clone https://github.com/TuUsuario/AgenteIaConsultasGarnierRrhh.git
-cd AgenteIaConsultasGarnierRrhh/SolucionAgenteInteligenciaArtificialConsultasGarnierRrhh
+git clone https://github.com/asporras7-dev/SolucionAgenteInteligenciaArtificialConsultasGarnierRrhh.git
+cd SolucionAgenteInteligenciaArtificialConsultasGarnierRrhh
 ```
 
 ### 3. Configuración de la Base de Datos (MySQL)
