@@ -62,7 +62,7 @@ El sistema moderniza la atención al empleado, combinando automatización con es
 
 ---
 
-## Valor de Negocio y Logros Técnicos (Highlights para Reclutadores)
+## Valor de Negocio y Logros Técnicos
 
 Este proyecto fue concebido no solo como una solución de software, sino como un producto enfocado en resolver problemas reales en la gestión de capital humano (RRHH), demostrando capacidad para integrar arquitecturas complejas de Inteligencia Artificial de forma segura y ética:
 
